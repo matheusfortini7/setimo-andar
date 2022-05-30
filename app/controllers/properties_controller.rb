@@ -23,6 +23,10 @@ class PropertiesController < ApplicationController
   end
 
   def update
+    @property = Property.find(params[:id])
+    @property.update(property_params)
+
+    redirect_to properties_path
   end
 
   def destroy
@@ -36,4 +40,5 @@ class PropertiesController < ApplicationController
   def property_params
     params.require(:property).permit(:title, :description, :street_name, :city, :state, :country, :price)
   end
+
 end
