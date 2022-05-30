@@ -1,0 +1,13 @@
+<div class="container">
+
+
+  <h2><%= @property.title %></h2>
+  <p><strong>Description:</strong> <%= @property.description %></p>
+  <p><strong>Price:</strong> <%= number_to_currency(@property.price, :unit => "R$") %></p>
+  <p><strong>Location:</strong> <i>street - </i> <%= @property.street_name %> | <i>city - </i> <%= @property.city %> | <i>state - </i> <%= @property.state %> | <i>country - </i> <%= @property.country %></p>
+
+
+  <%= link_to 'Edit the property', edit_property_path(@property) %>
+  <%= link_to 'Delete the property', property_path(@property), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Back', properties_path %>
+</div>
