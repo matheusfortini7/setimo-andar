@@ -1,0 +1,14 @@
+<h1 class="text-center mt-3">Edit property</h1>
+
+<div class="container">
+  <%= simple_form_for @property do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :country, as: :text %>
+    <%= f.input :state %>
+    <%= f.input :city %>
+    <%= f.input :street_name %>
+    <%= f.input :price %>
+    <%= f.submit %>
+  <% end %>
+</div>
