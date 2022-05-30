@@ -7,6 +7,7 @@ class PropertiesController < ApplicationController
   end
 
   def new
+    @property = Property.new
   end
 
   def create
