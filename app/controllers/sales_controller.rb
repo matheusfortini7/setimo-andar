@@ -10,9 +10,11 @@ class SalesController < ApplicationController
     else
       render 'properties/show'
     end
+    skip_authorization
   end
 
   def show
     @sale = Sale.find(params[:id])
+    skip_authorization
   end
 end
