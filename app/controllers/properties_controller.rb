@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @properties = Property.all
   end
@@ -13,6 +15,7 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.new(property_params)
+    @property.user = current_user
     if @property.save
       redirect_to property_path(@property)
     else
