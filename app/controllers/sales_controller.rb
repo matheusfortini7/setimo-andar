@@ -15,9 +15,4 @@ class SalesController < ApplicationController
   def show
     @sale = Sale.find(params[:id])
   end
-
-  def destroy
-    @sale = Sale.find(params[:id])
-    @sale.destroy
-  end
 end

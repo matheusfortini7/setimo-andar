@@ -1,6 +1,10 @@
 class PropertiesController < ApplicationController
   def index
-    @properties = Property.all
+    properties = Property.all
+
+    @properties = properties.select do |property|
+      property.sales.ids == []
+    end
   end
 
   def show
