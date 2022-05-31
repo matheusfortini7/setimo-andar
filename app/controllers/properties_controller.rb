@@ -2,11 +2,16 @@ class PropertiesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @properties = Property.all
+    properties = Property.all
+
+    @properties = properties.select do |property|
+      property.sales.ids == []
+    end
   end
 
   def show
     @property = Property.find(params[:id])
+    @sale = Sale.new
   end
 
   def new

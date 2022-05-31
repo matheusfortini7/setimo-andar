@@ -10,4 +10,5 @@
   <%= link_to 'Edit the property', edit_property_path(@property) %>
   <%= link_to 'Delete the property', property_path(@property), method: :delete, data: { confirm: "Are you sure?" } %>
   <%= link_to 'Back', properties_path %>
+  <%= link_to 'Buy',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" } %>
 </div>
