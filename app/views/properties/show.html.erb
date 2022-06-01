@@ -18,7 +18,7 @@
           <%= link_to 'Delete', property_path(@property), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
         <% end %>
         <% if @property.user != current_user %>
-          <%= link_to 'Buy',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+          <%= link_to 'Buy',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-success' %>
         <% end %>
       </div>
     </div>
