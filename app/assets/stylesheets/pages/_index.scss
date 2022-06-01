@@ -2,13 +2,17 @@
 @import "home";
 // @import "index";
 
+body {
+  background-color: #F5F2E4;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.carousel-item {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -33,6 +37,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  background-color: #E4572E;
 }
 
 .card-trip-infos .card-trip-user {
