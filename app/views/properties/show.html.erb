@@ -1,10 +1,10 @@
 <div class="container">
 
 
-  <h2><%= @property.title %></h2>
+  <h2><%= @property.title.capitalize %></h2>
   <p><strong>Description:</strong> <%= @property.description %></p>
   <p><strong>Price:</strong> <%= number_to_currency(@property.price, :unit => "R$") %></p>
-  <p><strong>Location:</strong> <i>street - </i> <%= @property.street_name %> | <i>city - </i> <%= @property.city %> | <i>state - </i> <%= @property.state %> | <i>country - </i> <%= @property.country %></p>
+  <p><strong>Location:</strong> <%= @property.address %></p>
 
   <% if policy(@property).edit? %>
     <%= link_to 'Edit the property', edit_property_path(@property) %>

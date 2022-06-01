@@ -2,7 +2,7 @@
   <% @properties.each do |property| %>
     <li><%= link_to property.title.capitalize, property_path(property) %></li>
     <ul>
-      <li> <strong><%= property.state %>, <%= property.country %></strong>  </li>
+      <li> <strong><%= property.address %></strong>  </li>
       <li><%= property.description %></li>
       <li><%= number_to_currency(property.price, :unit => "R$") %></li>
 
