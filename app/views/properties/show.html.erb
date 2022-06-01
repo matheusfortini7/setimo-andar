@@ -10,8 +10,8 @@
     <%= cl_image_tag("qvniukyuncqby4zvqljv") %>
     <div class="card-product-infos-show">
       <p><%= @property.description %></p>
-      <p><%= number_to_currency(@property.price, :unit => "R$") %></p>
-      <div class="btns-card">
+      <p><strong><%= number_to_currency(@property.price, :unit => "R$") %></strong></p>
+      <div class="btns-card d-flex">
         <% if policy(@property).edit? %>
           <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-warning' %>
         <% end %>
