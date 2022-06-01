@@ -23,10 +23,7 @@ arr = User.all.ids
     user_id: arr.sample,
     price: rand(100_000..300_000),
     description: Faker::Lorem.sentence,
-    street_name: Faker::Address.street_name,
-    city: Faker::Address.city,
-    state: Faker::Address.state,
-    country: Faker::Address.country,
+    address: Faker::Address.full_address,
     title: %w[house apartment farm tower castle].sample
   )
 end

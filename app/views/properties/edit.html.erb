@@ -4,10 +4,7 @@
   <%= simple_form_for @property do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :country, as: :text %>
-    <%= f.input :state %>
-    <%= f.input :city %>
-    <%= f.input :street_name %>
+    <%= f.input :address %>
     <%= f.input :price %>
     <%= f.submit %>
   <% end %>
