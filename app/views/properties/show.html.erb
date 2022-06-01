@@ -2,13 +2,15 @@
 
 
   <div class="mt-3">
-    <h2><%= @property.title.capitalize %></h2>
-    <p><%= @property.address %></p>
   </div>
 
   <div class="card-product-show">
     <%= cl_image_tag("qvniukyuncqby4zvqljv") %>
-    <div class="card-product-infos-show">
+    <div class="card-product-infos-show d-flex flex-column justify-content-between">
+      <div class="title-info">
+        <h2><%= @property.title.capitalize %></h2>
+        <p><strong><%= @property.address %></strong></p>
+      </div>
       <p><%= @property.description %></p>
       <p><strong><%= number_to_currency(@property.price, :unit => "R$") %></strong></p>
       <div class="btns-card d-flex">
