@@ -3,7 +3,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 130px 0;
 }
 
 .banner h1 {
@@ -20,36 +20,19 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.cards-home {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 5px;
-}
-
-.card-category-home {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
 .information {
+  margin: 10px;
   background-color:#F5F2E4;
+  color:#3D3737;
+
+  h2 {
+    font-size: 28px;
+  }
 }
 
 .btn-flat {
-  display: grid;
-  justify-content: center;
-  color: white;
+  margin: 10px;
+  color: rgb(255, 255, 255);
   padding: 8px 24px;
   border-radius: 4px;
   background: #E4572E;
@@ -59,4 +42,31 @@
 .btn-flat:hover {
   background: #E4572E;
   color: white;
+  opacity: 0.7;
+}
+
+.cards-home {
+  margin: 3px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-category-home {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #080808;
+  }
 }
