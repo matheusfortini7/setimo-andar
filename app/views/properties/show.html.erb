@@ -2,18 +2,29 @@
 
 
   <h2><%= @property.title.capitalize %></h2>
-  <p><strong>Description:</strong> <%= @property.description %></p>
-  <p><strong>Price:</strong> <%= number_to_currency(@property.price, :unit => "R$") %></p>
-  <p><strong>Location:</strong> <%= @property.address %></p>
+  <p><%= @property.address %></p>
 
-  <% if policy(@property).edit? %>
-    <%= link_to 'Edit the property', edit_property_path(@property) %>
-  <% end %>
+  <div class="card-product-show">
+    <%= image_tag "interior-unsplash.jpg" %>
+    <div class="card-product-infos-show">
+      <p><%= @property.description %></p>
+      <p><%= number_to_currency(@property.price, :unit => "R$") %></p>
+      <div class="btns-card">
+        <% if policy(@property).edit? %>
+          <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-warning' %>
+        <% end %>
 
-  <% if policy(@property).destroy? %>
-    <%= link_to 'Delete the property', property_path(@property), method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
+        <% if policy(@property).destroy? %>
+          <%= link_to 'Delete', property_path(@property), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+        <% end %>
+        <% if @property.user != current_user %>
+          <%= link_to 'Buy',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <%= link_to 'Back', properties_path %>
-  <%= link_to 'Buy',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" } %>
+
+
+  <%= link_to 'Back', properties_path, class: 'btn btn-primary mt-3' %>
 </div>
