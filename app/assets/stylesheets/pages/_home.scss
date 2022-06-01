@@ -1,1 +1,72 @@
 // Specific CSS for your home-page
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 130px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px #E4572E;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: #E4572E;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.information {
+  margin: 10px;
+  background-color:#F5F2E4;
+  color:#3D3737;
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+.btn-flat {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #E4572E;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #E4572E;
+  color: white;
+  opacity: 0.7;
+}
+
+.cards-home {
+  margin: 3px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-category-home {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #080808;
+  }
+}

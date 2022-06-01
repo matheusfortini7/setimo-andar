@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(https://images.unsplash.com/photo-1568605114967-8130f3a36994);">
+  <div class="container">
+      <h1 class="d-flex justify-content-center" >Sétimo Andar</h1>
+      <p class="d-flex justify-content-center"> <%= link_to "Encontre seu lar", properties_path, class: "btn btn-flat" %></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="information">
+    <h2 class="d-flex justify-content-center">O que você procura?</h2>
+    <p class="d-flex justify-content-center">Sétimo Andar tem diversas opções pra você encontrar o imóvel perfeito!</p>
+  </div>
+</div>
+
+<div class="cards-home">
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6)">
+    <a><%= link_to "Casas", properties_path %></a>
+  </div>
+
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1523192193543-6e7296d960e4)">
+    <a><%= link_to "Apartamentos", properties_path %></a>
+  </div>
+
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1601189992152-6ef7ebb531a8)">
+    <a><%= link_to "Fazendas", properties_path %></a>
+  </div>
+
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508682641856-78948a748357)">
+    <a><%= link_to "Castelos", properties_path %></a>
+  </div>
+</div>
