@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(https://images.unsplash.com/photo-1568605114967-8130f3a36994);">
+  <div class="container">
+      <h1 class="d-flex justify-content-center" >Sétimo andar</h1>
+      <p class="d-flex justify-content-center">Encontre seu lar</p>
+  </div>
+</div>
+
+
+<div class="cards-home">
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Casa
+  </div>
+
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Apartamento
+  </div>
+
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Fazenda
+  </div>
+</div>
+<div class="container">
+  <div class="information">
+    <h2 class="d-flex justify-content-center">O que você procura?</h2>
+    <p class="d-flex justify-content-center">Sétimo Andar tem diversas opções pra você encontrar o imóvel perfeito!</p>
+    <%= link_to "veja aqui", properties_path, class: "btn btn-flat" %>
+  </div>
+</div>
