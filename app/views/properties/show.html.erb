@@ -1,11 +1,13 @@
 <div class="container">
 
 
-  <h2><%= @property.title.capitalize %></h2>
-  <p><%= @property.address %></p>
+  <div class="mt-3">
+    <h2><%= @property.title.capitalize %></h2>
+    <p><%= @property.address %></p>
+  </div>
 
   <div class="card-product-show">
-    <%= image_tag "interior-unsplash.jpg" %>
+    <%= cl_image_tag("qvniukyuncqby4zvqljv") %>
     <div class="card-product-infos-show">
       <p><%= @property.description %></p>
       <p><%= number_to_currency(@property.price, :unit => "R$") %></p>
