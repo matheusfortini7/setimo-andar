@@ -1,11 +1,16 @@
 <h1 class="text-center mt-3">Edit property</h1>
 
 <div class="container">
-  <%= simple_form_for @property do |f| %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :address %>
-    <%= f.input :price %>
-    <%= f.submit %>
-  <% end %>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <%= simple_form_for(@property) do |f| %>
+      <%= f.input :title  %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :price %>
+      <%= f.submit 'Update Property', class: "btn btn-default btn-primary" %>
+
+    </div>
+  </div>
 </div>
+<% end %>
