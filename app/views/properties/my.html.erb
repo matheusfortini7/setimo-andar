@@ -5,7 +5,11 @@
     <% end %>
     <% @properties.each do |property| %>
       <div class="card-product-sale mb-3 mt-3">
-        <%= image_tag("interior-unsplash.jpg") %>
+        <% if property.photos.attached? %>
+          <%= cl_image_tag property.photos.first.key %>
+        <% else %>
+          <%= image_tag("interior-unsplash.jpg") %>
+        <% end %>
         <div class="card-product-infos-sale d-flex flex-column justify-content-between">
           <div class="title-info">
             <h2><%= property.title.capitalize %></h2>
