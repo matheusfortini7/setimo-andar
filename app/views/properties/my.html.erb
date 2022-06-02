@@ -4,9 +4,9 @@
       <h1 class="mt-5">You don't have any propeties yet :&#40;</h1>
     <% end %>
     <% @properties.each do |property| %>
-      <div class="card-product-show mb-3 mt-3">
+      <div class="card-product-sale mb-3 mt-3">
         <%= image_tag("interior-unsplash.jpg") %>
-        <div class="card-product-infos-show d-flex flex-column justify-content-between">
+        <div class="card-product-infos-sale d-flex flex-column justify-content-between">
           <div class="title-info">
             <h2><%= property.title.capitalize %></h2>
             <p><strong><%= property.address %></strong></p>
