@@ -16,3 +16,33 @@
 body {
   background-color: #F5F2E4;
 }
+
+.property-name {
+  margin-right: 0;
+}
+
+.box-sale-images {
+  height: 500px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.box-sale-images-small {
+  width: 520px;
+}
+
+.sale-image {
+  object-fit: cover;
+}
+
+.right-image {
+  height: 50%;
+}
+
+.big-image {
+  height: 100%;
+  width: 100%;
+  // border-radius: 10px 0 0 10px;
+}
