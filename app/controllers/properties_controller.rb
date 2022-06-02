@@ -3,10 +3,13 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: %i[show edit update destroy]
 
   def index
-    properties = policy_scope(Property).order(created_at: :desc)
+    policy_scope(Property).order(created_at: :asc)
 
-    @properties = properties.select do |property|
-      property.sales.ids == []
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR address ILIKE :query"
+      @properties = Property.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @properties = Property.all
     end
   end
 
