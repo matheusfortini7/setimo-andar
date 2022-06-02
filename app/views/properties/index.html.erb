@@ -18,25 +18,14 @@
           <div class="card-trip my-2">
             <div id= <%= "carouselExampleControls#{index}" %>  class="carousel slide" data-bs-interval="false">
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://i.pinimg.com/736x/4f/1c/59/4f1c59e481781f3336360f7a7d9038e5.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.squarespace-cdn.com/content/v1/59f2544d8fd4d2f32b40683a/1528233145624-QN03XLHC6W3U2A6EIX77/Log-Hill-Mountain-House-Front-View-1500px.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.adsttc.com/media/images/59f0/7cee/b22e/3819/9400/0122/slideshow/See_Through_House_-_Albert_Lim_(17).jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="http://www.contemporist.com/wp-content/uploads/2016/10/contemporary-architecture_251016_01-800x533.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.squarespace-cdn.com/content/v1/59f2544d8fd4d2f32b40683a/1528245296806-A36MBIVB2NU0PVQG3K6A/Divide-Ranch-Interior-1500px.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://rockymountaindesign.com/wp-content/uploads/2018/04/84-1.jpg" class="d-block w-100" alt="...">
-                </div>
+
+               <% property.photos.each_with_index do |photo, index| %>
+                <div class="carousel-item carousel-item-index <%= index == 0 ? 'active' : '' %>">
+                  <%= cl_image_tag photo.key, height: 200, class: "w-100" %>
+                 </div>
+              <% end %>
               </div>
+
               <button class="carousel-control-prev" type="button" data-bs-target=<%= "#carouselExampleControls#{index}" %> data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -52,7 +41,7 @@
                 <h2><%= property.title %></h2>
                 <p><%= property.description %></p>
               </div>
-              <h2 class="card-trip-pricing"><%= property.price %></h2>
+              <h2 class="card-trip-pricing"><%= number_to_currency(property.price, :unit => "R$") %></h2>
               <img src="https://media.istockphoto.com/vectors/default-avatar-profile-icon-vector-vector-id1337144146?b=1&k=20&m=1337144146&s=170667a&w=0&h=ys-RUZbXzQ-FQdLstHeWshI4ViJuEhyEa4AzQNQ0rFI=" class="card-trip-user avatar-bordered" />
             </div>
           </div>
