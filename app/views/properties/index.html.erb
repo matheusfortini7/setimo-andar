@@ -1,3 +1,16 @@
+<div class="search">
+  <%= form_tag properties_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "search__text",
+    placeholder: "Find a home"
+  %>
+  <%= button_tag(type: "submit", class: "search__button") do  %>
+    <i class="fas fa-search"></i>
+  <% end %>
+  <% end %>
+</div>
+
   <div class="row m-0">
     <% @properties.each_with_index do |property, index| %>
       <div class="col-3">

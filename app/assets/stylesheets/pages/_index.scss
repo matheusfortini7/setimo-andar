@@ -46,3 +46,36 @@ body {
   top: -20px;
   width: 40px;
 }
+
+.search {
+  display: flex;
+  margin: 1rem 1rem;
+  justify-content: center;
+
+  .search__text {
+    border-radius: 10px;
+    border: none;
+    padding: .7rem;
+    width: 60vw;
+  }
+
+  .search__text:focus {
+    outline: none;
+  }
+
+  .search__button {
+    border-radius: 10px;
+    border: none;
+    background-color:#E4572E;
+    color: #3D3737;
+    padding: .5rem .1rem;
+    width: 3rem;
+    color: #fff;
+    margin: 0 .5rem;
+    opacity: .8;
+  }
+
+  .search__button:hover {
+    opacity: 1;
+  }
+}
