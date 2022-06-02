@@ -5,11 +5,23 @@
       <h3><span class="property-name text-warning"><%= @sale.property.title %></span> is now yours :&#41;</h3>
     </div>
     <div class="box-sale-images d-flex">
-      <%= image_tag "interior-unsplash.jpg", class: "sale-image big-image" %>
-      <div class="box-sale-images-small d-flex flex-column">
-        <%= image_tag "interior-unsplash.jpg", class: "sale-image right-image" %>
-        <%= image_tag "interior-unsplash.jpg", class: "sale-image right-image" %>
-      </div>
+      <% if @property.photos.attached? %>
+        <% if @property.photos.length >= 3 %>
+          <%= cl_image_tag @property.photos.first.key, class: "sale-image big-image" %>
+          <div class="box-sale-images-small d-flex flex-column">
+            <%= cl_image_tag @property.photos[1].key, class: "sale-image right-image" %>
+            <%= cl_image_tag @property.photos[2].key, class: "sale-image right-image" %>
+          </div>
+        <% else %>
+          <%= cl_image_tag @property.photos.first.key, class: "sale-image big-image" %>
+        <% end %>
+      <% else %>
+        <%= image_tag "interior-unsplash.jpg", class: "sale-image big-image" %>
+        <div class="box-sale-images-small d-flex flex-column">
+          <%= image_tag "interior-unsplash.jpg", class: "sale-image right-image" %>
+          <%= image_tag "interior-unsplash.jpg", class: "sale-image right-image" %>
+        </div>
+      <% end %>
     </div>
   </div>
   <%= link_to 'Back', properties_path, class: 'btn btn-primary mt-3' %>

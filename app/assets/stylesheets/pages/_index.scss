@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "sale";
 // @import "index";
 
 body {
@@ -29,7 +30,6 @@ body {
   opacity: .7;
   margin: 0;
 }
-
 
 .card-trip .card-trip-infos {
   padding: 16px;

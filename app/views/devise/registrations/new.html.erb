@@ -4,45 +4,41 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-
- <div class="container">
-
-      <div class="form-inputs">
-<div class="row justify-content-center mt-4">
-    <div class="col-md-3 ">
-          <%= f.input :first_name,
-                        required: true,
-                        autofocus: true,
-                        placeholder: "first name",
-                        input_html: { autocomplete: "first name" }%>
-          <%= f.input :last_name,
-                        required: true,
-                        autofocus: true,
-                        placeholder: "last name",
-                        input_html: { autocomplete: "last name" }%>
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true,
-                        placeholder: "examplel@email.com",
-                        input_html: { autocomplete: "email" }%>
-            <%= f.input :password,
-                        required: true,
-                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                        placeholder:"******",
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :password_confirmation,
-                        required: true,
-                        placeholder:"******",
-                        input_html: { autocomplete: "new-password" } %>
-                        <div class="text-center">
-                        </div>
-
-
-              <div class="form-actions">
-                <div class="row text-center">
-                  <%= f.submit 'Sign up', class: "btn btn-primary btn-lg" %>
+<div class="container">
+  <div class="form-inputs">
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-3 ">
+        <%= f.input :first_name,
+                    required: true,
+                    autofocus: true,
+                    placeholder: "first name",
+                    input_html: { autocomplete: "first name" }%>
+        <%= f.input :last_name,
+                    required: true,
+                    autofocus: true,
+                    placeholder: "last name",
+                    input_html: { autocomplete: "last name" }%>
+          <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    placeholder: "examplel@email.com",
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    placeholder:"******",
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    placeholder:"******",
+                    input_html: { autocomplete: "new-password" } %>
+                    <div class="text-center">
+                    </div>
+                <div class="form-actions">
+                  <div class="row text-center">
+                    <%= f.submit 'Sign up', class: "btn btn-primary btn-lg" %>
+                  </div>
                 </div>
-              </div>
         </div>
       </div>
     </div>
