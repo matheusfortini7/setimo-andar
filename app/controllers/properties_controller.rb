@@ -12,6 +12,14 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+
+    @markers = {
+        lat: @property.latitude,
+        lng: @property.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { flat: @property }),
+        image_url: helpers.asset_url("home-icon.png")
+        }
+
     @sale = Sale.new
     authorize @property
   end
