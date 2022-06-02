@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <% @properties.each do |property| %>
+      <div class="card-product-show mb-3 mt-3">
+        <%= image_tag("interior-unsplash.jpg") %>
+        <div class="card-product-infos-show d-flex flex-column justify-content-between">
+          <div class="title-info">
+            <h2><%= property.title.capitalize %></h2>
+            <p><strong><%= property.address %></strong></p>
+          </div>
+          <p><%= property.description %></p>
+          <p><strong><%= number_to_currency(property.price, :unit => "R$") %></strong></p>
+          <div class="btns-card d-flex">
+            <% if policy(property).edit? %>
+              <%= link_to 'Edit', edit_property_path(property), class: 'btn btn-warning' %>
+            <% end %>
+
+            <% if policy(property).destroy? %>
+              <%= link_to 'Delete', property_path(property), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+            <% end %>
+            <% if property.user != current_user %>
+              <%= link_to 'Buy',  property_sales_path(property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
