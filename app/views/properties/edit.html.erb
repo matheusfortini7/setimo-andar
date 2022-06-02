@@ -8,6 +8,7 @@
       <%= f.input :description %>
       <%= f.input :address %>
       <%= f.input :price %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.submit 'Update Property', class: "btn btn-default btn-primary" %>
 
     </div>

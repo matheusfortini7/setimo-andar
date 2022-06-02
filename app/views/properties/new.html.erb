@@ -9,6 +9,7 @@
       <%= f.input :address %>
       <%= f.input :price %>
       <%= number_to_currency(@property.price, :unit => "R$") %>
+       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.submit 'Create Property', class: "btn btn-default btn-primary" %>
 
 
