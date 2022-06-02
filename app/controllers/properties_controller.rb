@@ -5,11 +5,13 @@ class PropertiesController < ApplicationController
   def index
     policy_scope(Property).order(created_at: :asc)
 
+    @properties = Property.includes(:sales).where(sales: { property_id: nil })
+
     if params[:query].present?
       sql_query = "title ILIKE :query OR address ILIKE :query"
-      @properties = Property.where(sql_query, query: "%#{params[:query]}%")
+      @properties = @properties.where(sql_query, query: "%#{params[:query]}%")
     else
-      @properties = Property.all
+      @properties
     end
   end
 
