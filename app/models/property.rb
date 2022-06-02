@@ -1,6 +1,7 @@
 class Property < ApplicationRecord
   belongs_to :user
   has_many :sales, dependent: :destroy
+  has_many_attached :photos
   geocoded_by :address
   # Incluir as validações dos campos
   validates :title, :description, :address, presence: true

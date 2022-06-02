@@ -5,7 +5,27 @@
   </div>
 
   <div class="card-product-show mb-3">
-    <%= image_tag("interior-unsplash.jpg") %>
+  <div class="card-product-carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @property.photos.each_with_index do |photo, index| %>
+          <div class="carousel-item carousel-item-show <%= index == 0 ? 'active' : '' %>">
+            <%= cl_image_tag photo.key, height: 300, width: 500, crop: :fill %>
+          </div>
+        <% end %>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
     <div class="card-product-infos-show d-flex flex-column justify-content-between">
       <div class="title-info">
         <h2><%= @property.title.capitalize %></h2>
