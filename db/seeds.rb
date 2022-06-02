@@ -16,14 +16,14 @@ require 'faker'
 #   )
 # end
 
-arr = User.all.ids
+# arr = User.all.ids
 
-5.times do
-  Property.create!(
-    user_id: arr.sample,
-    price: rand(100_000..300_000),
-    description: Faker::Lorem.sentence,
-    address: Faker::Address.full_address,
-    title: %w[house apartment farm tower castle].sample
-  )
-end
+# 5.times do
+#   Property.create!(
+#     user_id: arr.sample,
+#     price: rand(100_000..300_000),
+#     description: Faker::Lorem.sentence,
+#     address: Faker::Address.full_address,
+#     title: %w[house apartment farm tower castle].sample
+#   )
+# end
