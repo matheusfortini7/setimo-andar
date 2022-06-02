@@ -9,6 +9,10 @@ class PropertyPolicy < ApplicationPolicy
     end
   end
 
+  def my?
+    true
+  end
+
   def show?
     return true
   end

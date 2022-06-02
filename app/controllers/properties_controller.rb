@@ -10,6 +10,11 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def my
+    @properties = Property.where(user_id: current_user.id)
+    authorize @properties
+  end
+
   def show
     @property = Property.find(params[:id])
 
