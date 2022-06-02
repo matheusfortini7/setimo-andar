@@ -24,6 +24,9 @@ body {
 .box-sale-images {
   height: 500px;
   width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
 }
 
 .box-sale-images-small {
@@ -41,4 +44,5 @@ body {
 .big-image {
   height: 100%;
   width: 100%;
+  // border-radius: 10px 0 0 10px;
 }
