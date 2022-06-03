@@ -13,6 +13,10 @@ class PropertyPolicy < ApplicationPolicy
     true
   end
 
+  def filter?
+    true
+  end
+
   def show?
     return true
   end

@@ -13,6 +13,14 @@ class PropertiesController < ApplicationController
     else
       @properties
     end
+
+    if params[:type].present?
+      sql_query = "title ILIKE :query"
+      @properties = @properties.where(sql_query, query: "%#{params[:type]}%")
+    else
+      @properties
+    end
+
   end
 
   def my

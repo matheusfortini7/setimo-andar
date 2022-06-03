@@ -13,19 +13,19 @@
 </div>
 
 <div class="cards-home">
-  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6)">
-    <a><%= link_to "Casas", properties_path %></a>
-  </div>
+  <%= link_to properties_path(type: "casa"), class: "card-category-home", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6)" do %>
+    <p>Casas</p>
+  <% end %>
 
-  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1523192193543-6e7296d960e4)">
-    <a><%= link_to "Apartamentos", properties_path %></a>
-  </div>
+  <%= link_to properties_path(type: "apartamento"), class: "card-category-home", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1523192193543-6e7296d960e4)" do %>
+   <p>Apartamentos</p>
+  <% end %>
 
-  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1601189992152-6ef7ebb531a8)">
-    <a><%= link_to "Fazendas", properties_path %></a>
-  </div>
+  <%= link_to properties_path(type: "fazenda"), class: "card-category-home", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1601189992152-6ef7ebb531a8)" do %>
+    <p>Fazendas</p>
+  <% end %>
 
-  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508682641856-78948a748357)">
-    <a><%= link_to "Castelos", properties_path %></a>
-  </div>
+  <%= link_to properties_path(type: "castelo"), class: "card-category-home", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508682641856-78948a748357)" do %>
+    <p>Castelos</p>
+  <% end %>
 </div>
