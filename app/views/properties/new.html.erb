@@ -1,4 +1,4 @@
-<h1 class="text-center my-5">Anúncie o seu imóvel</h1>
+<h1 class="text-center mt-3">Cadastrar nova propriedade</h1>
 
 <div class="main_section d-flex justify-content-around align-items-start">
   <div class="row mt-3">
@@ -11,8 +11,10 @@
               wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
       <%= f.input :price %>
       <%= number_to_currency(@property.price, :unit => "R$") %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit 'Create Property', class: "btn btn-default btn-primary " %>
+       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+       <div class="row text-center">
+        <%= f.submit 'Criar propriedade', class: "btn btn-default btn-primary" %>
+      </div>
     </div>
   </div>
 </div>
