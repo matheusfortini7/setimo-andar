@@ -35,14 +35,14 @@
       <p><strong><%= number_to_currency(@property.price, :unit => "R$") %></strong></p>
       <div class="btns-card d-flex">
         <% if policy(@property).edit? %>
-          <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-warning' %>
+          <%= link_to 'Editar', edit_property_path(@property), class: 'btn btn-warning' %>
         <% end %>
 
         <% if policy(@property).destroy? %>
-          <%= link_to 'Delete', property_path(@property), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+          <%= link_to 'Deletar', property_path(@property), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
         <% end %>
         <% if @property.user != current_user %>
-          <%= link_to 'Buy',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-success' %>
+          <%= link_to 'Comprar',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-success' %>
         <% end %>
       </div>
     </div>
