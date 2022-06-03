@@ -39,10 +39,10 @@
         <% end %>
 
         <% if policy(@property).destroy? %>
-          <%= link_to 'Deletar', property_path(@property), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+          <%= link_to 'Deletar', property_path(@property), method: :delete, data: { confirm: "Tem certeza que deseja deletar?" }, class: 'btn btn-danger' %>
         <% end %>
         <% if @property.user != current_user %>
-          <%= link_to 'Comprar',  property_sales_path(@property), method: :post, data: { confirm: "Are you sure?" }, class: 'btn btn-success' %>
+          <%= link_to 'Comprar',  property_sales_path(@property), method: :post, data: { confirm: "Tem certeza que deseja comprar?" }, class: 'btn btn-success' %>
         <% end %>
       </div>
     </div>
