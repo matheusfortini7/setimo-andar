@@ -11,7 +11,7 @@
   <% end %>
 </div>
 
-  <div class="row m-0">
+  <div class="row m-0 p-3">
     <% @properties.each_with_index do |property, index| %>
       <div class="col-3">
         <%= link_to property_path(property) do %>
@@ -37,13 +37,10 @@
             </div>
         <% end %>
             <div class="card-trip-infos">
-              <div>
-                <h2><%= property.title %></h2>
-                <p><%= property.description %></p>
-              </div>
-              <h2 class="card-trip-pricing"><%= number_to_currency(property.price, :unit => "R$") %></h2>
-              <img src="https://media.istockphoto.com/vectors/default-avatar-profile-icon-vector-vector-id1337144146?b=1&k=20&m=1337144146&s=170667a&w=0&h=ys-RUZbXzQ-FQdLstHeWshI4ViJuEhyEa4AzQNQ0rFI=" class="card-trip-user avatar-bordered" />
+              <h2 class="card-trip-pricing"><%= number_to_currency(property.price, :unit => "R$")  %></h2>
+              <p class="card-trip-address"><%= property.address %></p>
             </div>
+              <i class="far fa-heart"></i>
           </div>
       </div>
     <% end %>
