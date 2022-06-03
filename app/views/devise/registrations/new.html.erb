@@ -1,4 +1,4 @@
-<h2 class="text-center mt-5">Sign up</h2>
+<h2 class="text-center mt-5"></h2>
 
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -6,22 +6,24 @@
 
 <div class="container">
   <div class="form-inputs">
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-6">
+            <%= image_tag "signin.png", class: "col-md-6"%>
+
       <div class="col-md-3 ">
         <%= f.input :first_name,
                     required: true,
                     autofocus: true,
-                    placeholder: "first name",
+                    placeholder: "nome",
                     input_html: { autocomplete: "first name" }%>
         <%= f.input :last_name,
                     required: true,
                     autofocus: true,
-                    placeholder: "last name",
+                    placeholder: "sobrenome",
                     input_html: { autocomplete: "last name" }%>
           <%= f.input :email,
                     required: true,
                     autofocus: true,
-                    placeholder: "examplel@email.com",
+                    placeholder: "emaill@email.com",
                     input_html: { autocomplete: "email" }%>
         <%= f.input :password,
                     required: true,
