@@ -10,7 +10,11 @@ body {
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  min-height: 360px;
+  max-height: 360px;
+  position: relative;
+  border: none;
 }
 
 .carousel-item-index {
@@ -32,12 +36,24 @@ body {
 }
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 32px;
   display: flex;
+  gap: .5rem;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
-  background-color: #E4572E;
+  background-color: #fff;
+
+  .card-trip-pricing {
+    font-weight: bolder;
+    font-size: 1.125rem;
+  }
+
+  .card-trip-address {
+    font-size: 1rem;
+  }
+
 }
 
 .card-trip-infos .card-trip-user {
@@ -45,6 +61,16 @@ body {
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.fa-heart {
+  position: absolute;
+  bottom: 126px;
+  right: 47px;
+
+  .fa-heart:hover {
+    color: #E4572E;
+  }
 }
 
 .search {
