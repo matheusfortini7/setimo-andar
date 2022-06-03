@@ -16,6 +16,8 @@ class SalesController < ApplicationController
   def show
     @sale = Sale.find(params[:id])
     @property = Property.find(params[:property_id])
+    @property.user = current_user
+    @property.save
     skip_authorization
   end
 end
