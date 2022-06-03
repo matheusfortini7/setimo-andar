@@ -37,10 +37,10 @@
             </div>
         <% end %>
             <div class="card-trip-infos">
+              <h2 class="card-trip-title"><%= property.title %></h2>
               <h2 class="card-trip-pricing"><%= number_to_currency(property.price, :unit => "R$")  %></h2>
               <p class="card-trip-address"><%= property.address %></p>
             </div>
-              <i class="far fa-heart"></i>
           </div>
       </div>
     <% end %>
