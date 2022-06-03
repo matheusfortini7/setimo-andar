@@ -60,7 +60,7 @@ class PropertiesController < ApplicationController
     authorize @property
     @property.update(property_params)
 
-    redirect_to properties_path
+    redirect_to @property
   end
 
   def destroy
