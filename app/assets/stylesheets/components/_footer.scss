@@ -29,3 +29,13 @@ span {
   color: #fff;
   margin-right: 2rem;
 }
+
+.avatar-footer {
+  width: 75px;
+  transition: 0.2s;
+}
+
+.avatar-footer:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
