@@ -1,4 +1,4 @@
-<h1 class="text-center mt-3">New property</h1>
+<h1 class="text-center mt-3">Cadastrar nova propriedade</h1>
 
 <div class="container">
   <div class="row justify-content-center mt-5">
@@ -11,7 +11,9 @@
       <%= f.input :price %>
       <%= number_to_currency(@property.price, :unit => "R$") %>
        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit 'Create Property', class: "btn btn-default btn-primary" %>
+       <div class="row text-center">
+        <%= f.submit 'Criar propriedade', class: "btn btn-default btn-primary" %>
+      </div>
     </div>
   </div>
 </div>
