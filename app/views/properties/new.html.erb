@@ -1,7 +1,8 @@
-<h1 class="text-center mt-3">New property</h1>
+<h1 class="text-center my-5">Anúncie o seu imóvel</h1>
 
-<div class="container">
-  <div class="row justify-content-center mt-5">
+<div class="main_section d-flex justify-content-around align-items-start">
+  <div class="row mt-3">
+  <%= image_tag "create-property.svg", class: "col-6" %>
     <div class="col-md-6">
       <%= simple_form_for(@property) do |f| %>
       <%= f.input :title  %>
@@ -10,8 +11,8 @@
               wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
       <%= f.input :price %>
       <%= number_to_currency(@property.price, :unit => "R$") %>
-       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit 'Create Property', class: "btn btn-default btn-primary" %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit 'Create Property', class: "btn btn-default btn-primary " %>
     </div>
   </div>
 </div>
