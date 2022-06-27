@@ -23,7 +23,7 @@
 
 ## Features
 
-* Criação/Edição/Exlusão de anúncios
+* Criação/Edição/Exclusão de anúncios
 * Compra de imóveis
 
 ### Desenvolvido com
