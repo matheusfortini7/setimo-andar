@@ -64,5 +64,5 @@ Esse marketplace foi desenvolvido pensando em pessoas que gostariam de anunciar 
 
 Branca - brancasdc@gmail.com<br>
 Bruno - brunoshingai@gmail.com<br>
-Igor - assis.ricci@gmail.com<br>
+Igor - igorasricci@gmail.com<br>
 Matheus - matheusfortini7@gmail.com
